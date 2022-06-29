@@ -33,4 +33,12 @@ describe('SubjectFeedbackUseCase', () => {
       screenshot: 'data:image/png;base64foto.png'
     })).rejects.toThrow()
   })
+
+  it('should not be able to submit a feedback without comment', async () => {
+    await expect(submitFeedback.execute({
+      type: 'BUG',
+      comment: '',
+      screenshot: 'data:image/png;base64foto.png'
+    })).rejects.toThrow()
+  })
 })
