@@ -41,4 +41,12 @@ describe('SubjectFeedbackUseCase', () => {
       screenshot: 'data:image/png;base64foto.png'
     })).rejects.toThrow()
   })
+
+  it('should not be able to submit a feedback with an invalid screenshot', async () => {
+    await expect(submitFeedback.execute({
+      type: 'BUG',
+      comment: 'Está tudo bugado',
+      screenshot: 'wrong.png'
+    })).rejects.toThrow()
+  })
 })
