@@ -41,7 +41,7 @@ You need to install both [Node.js](https://nodejs.org) and [Yarn](https://yarnpk
 		"screenshot": null
 	}
 }
-
+```
 
 ## How to use it
 
